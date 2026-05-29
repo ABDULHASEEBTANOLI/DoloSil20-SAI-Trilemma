@@ -126,7 +126,7 @@ title = {Resolving the SAI Trilemma with a Novel Core--Shell Mineral Aerosol:
 DoloSil-20, a Silica-Passivated Dolomite Architecture for Simultaneous
 Optical Efficiency, Thermal Neutrality, and Ozone Safety},
 journal = {EarthArXiv Preprint},
-year = {2025},
+year = {2026},
 note = {Submitted to Atmospheric Chemistry and Physics (ACP)},
 url = {https://abdulhaseebtanoli.github.io/DoloSil20-SAI-Trilemma/}
 }
