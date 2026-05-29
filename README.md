@@ -1,4 +1,3 @@
-cat > /home/claude/README.md << 'EOF'
 # 🌍 DoloSil-20 · SAI Trilemma Screening — Figure & Data Repository
 
 ## 📘 Project Title
@@ -157,4 +156,3 @@ Reproduction, redistribution, or reuse of repository material requires written p
 EOF
 
 echo "✅ README.md successfully generated"
-echo "📄 Total lines: $(wc -l < /home/claude/README.md)"
