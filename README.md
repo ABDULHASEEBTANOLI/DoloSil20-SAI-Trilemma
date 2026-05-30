@@ -23,14 +23,12 @@ The repository is organized to support manuscript preparation, peer review, figu
 DoloSil20-SAI-Trilemma/
 
 ├── README.md
-├── All_Figures.pdf
-├── FULL_OVERVIEW_highres.pdf
-├── beta_back_comparison.pdf
-├── optics_Qsca_vs_diameter.pdf
-├── optics_g_vs_diameter.pdf
-├── residence_time_comparison.pdf
-├── screening_summary_3panel.pdf
-└── talc_settling_vt_mm_day_cases.pdf
+- [Full Overview](FULL_OVERVIEW_highres.pdf)
+- [All Figures](All_Figures.pdf)
+- [Residence Time Comparison](residence_time_comparison.pdf)
+- [Optics Qsca vs Diameter](optics_Qsca_vs_diameter.pdf)
+- [Optics g vs Diameter](optics_g_vs_diameter.pdf)
+- [Screening Summary](screening_summary_3panel.pdf)
 🧪 Main Figures
 
 These figures represent the main visual outputs of the study and the key screening results.
