@@ -1,127 +1,358 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>DoloSil-20 Research Repository</title>
-
-<style>
-body{
-    font-family: Arial, sans-serif;
-    max-width: 1100px;
-    margin:auto;
-    padding:20px;
-    background:#f8f9fa;
-}
-
-h1{
-    color:#003366;
-}
-
-.card{
-    background:white;
-    padding:15px;
-    margin:10px 0;
-    border-radius:8px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
-}
-
-a{
-    text-decoration:none;
-    font-weight:bold;
-    color:#0066cc;
-}
-
-a:hover{
-    color:#003366;
-}
-
-iframe{
-    width:100%;
-    height:900px;
-    border:1px solid #ccc;
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoloSil-20 Research Repository</title>
+  <style>
+    :root{
+      --bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#5b6472;
+      --accent:#0b5cab;
+      --accent2:#083d77;
+      --border:#e5e7eb;
+      --shadow:0 2px 10px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:28px 18px 50px;
+    }
+    .hero{
+      background:linear-gradient(135deg, #ffffff, #eef6ff);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      margin-bottom:18px;
+    }
+    h1{
+      margin:0 0 10px;
+      color:var(--accent2);
+      font-size:2rem;
+      line-height:1.2;
+    }
+    h2{
+      margin:30px 0 12px;
+      color:var(--accent2);
+      font-size:1.35rem;
+    }
+    h3{
+      margin:18px 0 10px;
+      color:var(--accent);
+      font-size:1.05rem;
+    }
+    p{margin:8px 0}
+    .muted{color:var(--muted)}
+    .pillrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .pill{
+      display:inline-block;
+      padding:7px 12px;
+      border-radius:999px;
+      background:#eaf3ff;
+      border:1px solid #d7e7fb;
+      color:var(--accent2);
+      font-size:.92rem;
+      font-weight:600;
+    }
+    .section{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:20px;
+      margin-top:18px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:14px;
+      box-shadow:0 1px 6px rgba(0,0,0,.04);
+    }
+    .card a{
+      text-decoration:none;
+      color:var(--accent);
+      font-weight:700;
+      word-break:break-word;
+    }
+    .card a:hover{color:var(--accent2)}
+    .small{font-size:.93rem;color:var(--muted)}
+    ul{margin:8px 0 0 20px}
+    .two-col{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:16px;
+    }
+    @media (max-width: 820px){
+      .two-col{grid-template-columns:1fr}
+      h1{font-size:1.65rem}
+    }
+    .table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:10px;
+      font-size:.96rem;
+    }
+    .table th,.table td{
+      border:1px solid var(--border);
+      padding:10px 12px;
+      vertical-align:top;
+      text-align:left;
+    }
+    .table th{
+      background:#f3f7fb;
+      color:var(--accent2);
+    }
+    iframe{
+      width:100%;
+      height:860px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:#fff;
+    }
+    code, pre{
+      background:#f6f8fa;
+      border:1px solid var(--border);
+      border-radius:10px;
+    }
+    pre{
+      overflow:auto;
+      padding:14px;
+      white-space:pre-wrap;
+      word-break:break-word;
+    }
+    a.button{
+      display:inline-block;
+      margin-top:8px;
+      padding:10px 14px;
+      background:var(--accent);
+      color:#fff;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+    }
+    a.button:hover{background:var(--accent2)}
+    .footer{
+      margin-top:18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="wrap">
 
-<h1>DoloSil-20 Research Repository</h1>
+    <div class="hero">
+      <h1>🌍 DoloSil-20 · SAI Trilemma Screening — Figure & Data Repository</h1>
+      <p class="muted"><strong>Project Title:</strong> Resolving the SAI Trilemma with a Novel Core–Shell Mineral Aerosol: DoloSil-20, a Silica-Passivated Dolomite Architecture for Simultaneous Optical Efficiency, Thermal Neutrality, and Ozone Safety</p>
 
-<p>
-Resolving the SAI Trilemma with a Novel Core–Shell Mineral Aerosol:
-<strong>DoloSil-20 (Silica-Passivated Dolomite)</strong>
-</p>
+      <div class="pillrow">
+        <span class="pill">👤 Abdul Haseeb Tanoli</span>
+        <span class="pill">👤 Shams ul Arfeen</span>
+        <span class="pill">🏛️ PIEAS, Islamabad</span>
+        <span class="pill">📄 EarthArXiv</span>
+        <span class="pill">🎯 Atmospheric Chemistry and Physics (ACP)</span>
+      </div>
 
-<hr>
+      <p style="margin-top:14px;">
+        This repository contains the principal figures and supporting visual PDFs associated with the DoloSil-20 study on Stratospheric Aerosol Injection (SAI) and the atmospheric engineering “SAI trilemma”.
+      </p>
+    </div>
 
-<h2>Available Documents</h2>
+    <div class="section">
+      <h2>📖 Overview</h2>
+      <p>
+        The repository is organized to support manuscript preparation, peer review, figure archiving, and scientific transparency.
+      </p>
 
-<div class="card">
-<a href="FULL_OVERVIEW_highres.pdf" target="_blank">
-📄 FULL_OVERVIEW_highres.pdf
-</a>
-</div>
+      <div class="two-col">
+        <div>
+          <h3>Core goals</h3>
+          <ul>
+            <li>High optical efficiency</li>
+            <li>Thermal neutrality</li>
+            <li>Ozone safety</li>
+          </ul>
 
-<div class="card">
-<a href="All_Figures.pdf" target="_blank">
-📄 All_Figures.pdf
-</a>
-</div>
+          <h3>Repository URL</h3>
+          <p>
+            <a href="https://abdulhaseebtanoli.github.io/DoloSil20-SAI-Trilemma/" target="_blank" rel="noopener">
+              https://abdulhaseebtanoli.github.io/DoloSil20-SAI-Trilemma/
+            </a>
+          </p>
+        </div>
 
-<div class="card">
-<a href="beta_back_comparison.pdf" target="_blank">
-📄 beta_back_comparison.pdf
-</a>
-</div>
+        <div>
+          <h3>Quick access</h3>
+          <a class="button" href="#downloads">Jump to Downloads</a><br />
+          <a class="button" href="#preview" style="margin-left:0; margin-top:10px;">Jump to PDF Preview</a>
+        </div>
+      </div>
+    </div>
 
-<div class="card">
-<a href="optics_Qsca_vs_diameter.pdf" target="_blank">
-📄 optics_Qsca_vs_diameter.pdf
-</a>
-</div>
+    <div class="section">
+      <h2>📂 Repository Structure</h2>
+      <pre>DoloSil20-SAI-Trilemma/
+├── README.md
+├── FULL_OVERVIEW_highres.pdf
+├── All_Figures.pdf
+├── beta_back_comparison.pdf
+├── optics_Qsca_vs_diameter.pdf
+├── optics_g_vs_diameter.pdf
+├── residence_time_comparison.pdf
+├── screening_summary_3panel.pdf
+└── talc_settling_vt_mm_day_cases.pdf</pre>
+    </div>
 
-<div class="card">
-<a href="optics_g_vs_diameter.pdf" target="_blank">
-📄 optics_g_vs_diameter.pdf
-</a>
-</div>
+    <div class="section" id="downloads">
+      <h2>🧪 Main Figures</h2>
+      <p class="small">These figures represent the main visual outputs of the study and the key screening results.</p>
 
-<div class="card">
-<a href="residence_time_comparison.pdf" target="_blank">
-📄 residence_time_comparison.pdf
-</a>
-</div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>File</th>
+            <th>Description</th>
+            <th>Open</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>FULL_OVERVIEW_highres.pdf</td>
+            <td>High-resolution visual overview of the study</td>
+            <td><a href="FULL_OVERVIEW_highres.pdf" target="_blank" rel="noopener">Open</a></td>
+          </tr>
+          <tr>
+            <td>beta_back_comparison.pdf</td>
+            <td>Backscatter proxy comparison across candidate materials</td>
+            <td><a href="beta_back_comparison.pdf" target="_blank" rel="noopener">Open</a></td>
+          </tr>
+          <tr>
+            <td>screening_summary_3panel.pdf</td>
+            <td>Three-panel trilemma screening summary</td>
+            <td><a href="screening_summary_3panel.pdf" target="_blank" rel="noopener">Open</a></td>
+          </tr>
+          <tr>
+            <td>All_Figures.pdf</td>
+            <td>Complete multi-page figure compilation</td>
+            <td><a href="All_Figures.pdf" target="_blank" rel="noopener">Open</a></td>
+          </tr>
+        </tbody>
+      </table>
 
-<div class="card">
-<a href="screening_summary_3panel.pdf" target="_blank">
-📄 screening_summary_3panel.pdf
-</a>
-</div>
+      <h2>📑 Supplementary Figures</h2>
+      <p class="small">These PDFs provide supporting optical and settling-velocity analyses.</p>
 
-<div class="card">
-<a href="talc_settling_vt_mm_day_cases.pdf" target="_blank">
-📄 talc_settling_vt_mm_day_cases.pdf
-</a>
-</div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>File</th>
+            <th>Description</th>
+            <th>Open</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>optics_g_vs_diameter.pdf</td>
+            <td>Asymmetry parameter <em>g</em> vs particle diameter</td>
+            <td><a href="optics_g_vs_diameter.pdf" target="_blank" rel="noopener">Open</a></td>
+          </tr>
+          <tr>
+            <td>optics_Qsca_vs_diameter.pdf</td>
+            <td>Scattering efficiency <em>Qsca</em> vs particle diameter</td>
+            <td><a href="optics_Qsca_vs_diameter.pdf" target="_blank" rel="noopener">Open</a></td>
+          </tr>
+          <tr>
+            <td>talc_settling_vt_mm_day_cases.pdf</td>
+            <td>Talc settling-velocity sensitivity cases</td>
+            <td><a href="talc_settling_vt_mm_day_cases.pdf" target="_blank" rel="noopener">Open</a></td>
+          </tr>
+          <tr>
+            <td>residence_time_comparison.pdf</td>
+            <td>Residence-time comparison under settling-only assumptions</td>
+            <td><a href="residence_time_comparison.pdf" target="_blank" rel="noopener">Open</a></td>
+          </tr>
+        </tbody>
+      </table>
 
-<hr>
+      <h2>📌 Figure Compilation</h2>
+      <p>
+        <strong>All_Figures.pdf</strong> contains the full compiled figure set in one document for convenience, review, and archiving.
+      </p>
+    </div>
 
-<h2>PDF Preview</h2>
+    <div class="section" id="preview">
+      <h2>📚 PDF Preview</h2>
+      <p>Default preview of the Full Overview document:</p>
+      <iframe src="FULL_OVERVIEW_highres.pdf"></iframe>
+    </div>
 
-<p>
-Default preview of the Full Overview document:
-</p>
+    <div class="section">
+      <h2>📚 Citation</h2>
+      <pre>@article{tanoli2026dolosil20,
+  author = {Abdul Haseeb Tanoli and Shams ul Arfeen},
+  title = {Resolving the SAI Trilemma with a Novel Core--Shell Mineral Aerosol: DoloSil-20, a Silica-Passivated Dolomite Architecture for Simultaneous Optical Efficiency, Thermal Neutrality, and Ozone Safety},
+  journal = {EarthArXiv Preprint},
+  year = {2026},
+  note = {Submitted to Atmospheric Chemistry and Physics (ACP)},
+  url = {https://abdulhaseebtanoli.github.io/DoloSil20-SAI-Trilemma/}
+}</pre>
+    </div>
 
-<iframe src="FULL_OVERVIEW_highres.pdf"></iframe>
+    <div class="section">
+      <h2>🔬 Data and Code Availability</h2>
+      <p>
+        The full simulation framework, including the 1D sectional aerosol model, optical solver, heterogeneous chemistry routines, and figure-generation scripts, is not publicly released at this stage.
+      </p>
+      <p>
+        For verification, replication, or collaboration, contact:
+      </p>
+      <p><strong>📧 Abdul Haseeb Tanoli</strong> — bsmme2511@pieas.edu.pk</p>
+      <p><strong>🏛️ PIEAS SAI Research Initiative</strong><br />
+      Department of Metallurgy and Materials Engineering, PIEAS</p>
+    </div>
 
-<hr>
+    <div class="section">
+      <h2>⚖️ License</h2>
+      <p>
+        © 2026 Abdul Haseeb Tanoli &amp; Shams ul Arfeen. All rights reserved.
+      </p>
+      <p>
+        This repository is shared for scientific transparency in support of the EarthArXiv preprint.
+      </p>
+      <p>
+        Reproduction, redistribution, or reuse of repository material requires written permission from the corresponding author.
+      </p>
+    </div>
 
-<p>
-Author: Abdul Haseeb Tanoli
-</p>
+    <div class="footer">
+      DoloSil-20 · GitHub Pages Research Repository
+    </div>
 
+  </div>
 </body>
 </html>
